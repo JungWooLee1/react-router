@@ -11,8 +11,6 @@ import PostsIndex from './components/posts_index';
 
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
-
-
 ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
