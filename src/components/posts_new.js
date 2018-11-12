@@ -22,7 +22,10 @@ class PostsNew extends Component {
   }
 
   onSubmit(values) {
-    this.props.createPost(values);
+    // 콜백형식으로 구현
+    this.props.createPost(values, () => {
+      this.props.history.push('/');
+    });
   }
 
   render() {
